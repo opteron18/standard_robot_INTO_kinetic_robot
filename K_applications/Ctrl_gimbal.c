@@ -10,16 +10,16 @@
 #include <stdlib.h> 
 #include "remote_control.h"
 //#include "delay.h"
-#include "pwm.h"
+#include "bsp_fric.h"
 #include "Higher_Class.h"
 #include "User_Api.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "Comm_umpire.h"
-#include "laser.h"
+#include "referee.h"
+//#include "laser.h"
 #include "Ctrl_shoot.h"
-#include "can2.h"
-#include "Usart_SendData.h"
+#include "CAN_receive.h"
+//#include "Usart_SendData.h"
 
 #define DPI 0.043945f	 //码值角度分辨率，360/8192
 #define PITCH_IMU_CTRL  //pitch轴反馈控制方式
@@ -239,16 +239,18 @@ void friction_wheel_ramp_function(void)//摩擦轮控制函数
 		  speed_17mm_level = 1537;//1537;  //1500// 15m/s
 		
 		ramp_calc();
-		PWM_Write(PWM2_CH1,fri_out);
-    PWM_Write(PWM2_CH2,fri_out);	
+//		PWM_Write(PWM2_CH1,fri_out);
+//    PWM_Write(PWM2_CH2,fri_out);	
+		fric1_on(fri_out);
+		fric2_on(fri_out);
 	} 
 	
 	//关闭摩擦轮
 	if(!speed_17mm_level_Start_Flag)
 	{
 		ramp_calc1();
-		PWM_Write(PWM2_CH1,fri_out1);
-    PWM_Write(PWM2_CH2,fri_out1);
+		fric1_on(fri_out);
+		fric2_on(fri_out);
 	}
 }
 

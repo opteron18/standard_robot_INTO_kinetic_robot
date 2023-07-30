@@ -67,3 +67,6 @@ standard_tpye_c\ctrl_chassis.o: ../Middlewares/Third_Party/FreeRTOS/Source/inclu
 standard_tpye_c\ctrl_chassis.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 standard_tpye_c\ctrl_chassis.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 standard_tpye_c\ctrl_chassis.o: ..\K_applications\User_Api.h
+standard_tpye_c\ctrl_chassis.o: ..\application\referee.h
+standard_tpye_c\ctrl_chassis.o: ..\application\protocol\protocol.h
+standard_tpye_c\ctrl_chassis.o: ..\K_applications\Ctrl_gimbal.h

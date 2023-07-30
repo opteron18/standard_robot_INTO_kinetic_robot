@@ -60,3 +60,17 @@ standard_tpye_c\ctrl_gimbal.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
 standard_tpye_c\ctrl_gimbal.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
 standard_tpye_c\ctrl_gimbal.o: ..\application\remote_control.h
 standard_tpye_c\ctrl_gimbal.o: ..\bsp\boards\bsp_rc.h
+standard_tpye_c\ctrl_gimbal.o: ..\bsp\boards\bsp_fric.h
+standard_tpye_c\ctrl_gimbal.o: ..\K_applications\Higher_Class.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+standard_tpye_c\ctrl_gimbal.o: ../Inc/FreeRTOSConfig.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+standard_tpye_c\ctrl_gimbal.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+standard_tpye_c\ctrl_gimbal.o: ..\application\referee.h
+standard_tpye_c\ctrl_gimbal.o: ..\application\protocol\protocol.h
+standard_tpye_c\ctrl_gimbal.o: ..\K_applications\Ctrl_shoot.h

@@ -60,3 +60,13 @@ standard_tpye_c\ctrl_shoot.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
 standard_tpye_c\ctrl_shoot.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
 standard_tpye_c\ctrl_shoot.o: ..\application\remote_control.h
 standard_tpye_c\ctrl_shoot.o: ..\bsp\boards\bsp_rc.h
+standard_tpye_c\ctrl_shoot.o: ..\K_applications\Higher_Class.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+standard_tpye_c\ctrl_shoot.o: ../Inc/FreeRTOSConfig.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

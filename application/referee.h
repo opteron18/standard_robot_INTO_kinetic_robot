@@ -110,6 +110,16 @@ typedef __packed struct //0x0202
     uint16_t shooter_heat1;
 } ext_power_heat_data_t;
 
+typedef __packed struct //0x0202
+{
+    uint16_t chassis_volt;
+    uint16_t chassis_current;
+    float chassis_power;
+    uint16_t chassis_power_buffer;
+    uint16_t shooter_id1_17mm_cooling_heat;
+    uint16_t shooter_id2_17mm_cooling_heat;
+} ext_power_heat_data_tt;
+
 typedef __packed struct //0x0203
 {
     float x;
@@ -173,7 +183,8 @@ typedef __packed struct
     uint8_t data[32];
 } ext_download_stream_data_t;
 
-
+extern ext_game_robot_state_t Game_robot_state;//比赛机器人状态
+extern ext_power_heat_data_tt Umpire_PowerHeat;//实时功率热量数据
 
 extern void init_referee_struct_data(void);
 extern void referee_data_solve(uint8_t *frame);

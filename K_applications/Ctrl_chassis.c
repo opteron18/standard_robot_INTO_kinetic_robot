@@ -12,11 +12,11 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "User_Api.h"
-#include "Comm_umpire.h"
+#include "referee.h"
 #include "Ctrl_gimbal.h"
-#include "laser.h"
+//#include "laser.h"
 #include "math.h"
-#include "Usart_SendData.h"
+//#include "Usart_SendData.h"
 
 #define CHASSIS_MAX_SPEED ((LIM_3510_SPEED/60)*2*PI*WHEEL_R/MOTOR_P)//底盘最大速度，mm/s
 SpinTop_t SpinTop={0};

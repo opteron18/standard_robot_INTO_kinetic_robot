@@ -27,27 +27,33 @@ Project File Date:  07/28/2023
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\KEILv5\ARM\ARMCC\Bin'
 Build target 'standard_robot'
-compiling Ctrl_shoot.c...
-..\K_applications\Ctrl_shoot.c(13): error:  #5: cannot open source input file "pwm.h": No such file or directory
-  #include "pwm.h"
-..\K_applications\Ctrl_shoot.c: 0 warnings, 1 error
 compiling User_API.c...
-..\K_applications\User_API.c(11): error:  #5: cannot open source input file "Comm_umpire.h": No such file or directory
-  #include "Comm_umpire.h"
+..\K_applications\User_API.c(16): error:  #5: cannot open source input file "laser.h": No such file or directory
+  #include "laser.h"
 ..\K_applications\User_API.c: 0 warnings, 1 error
-compiling Ctrl_gimbal.c...
-..\K_applications\Ctrl_gimbal.c(13): error:  #5: cannot open source input file "pwm.h": No such file or directory
-  #include "pwm.h"
-..\K_applications\Ctrl_gimbal.c: 0 warnings, 1 error
 compiling Higher_Class.c...
-..\K_applications\Higher_Class.c(21): error:  #5: cannot open source input file "Comm_umpire.h": No such file or directory
-  #include "Comm_umpire.h"
+..\K_applications\Higher_Class.c(27): error:  #5: cannot open source input file "pwm.h": No such file or directory
+  #include "pwm.h"
 ..\K_applications\Higher_Class.c: 0 warnings, 1 error
+compiling Ctrl_shoot.c...
+..\K_applications\Ctrl_shoot.c(105): warning:  #223-D: function "GPIO_ReadInputDataBit" declared implicitly
+  	if(!Butten_Trig_Pin)  //判断子弹到达微动开关处  
+..\K_applications\Ctrl_shoot.c(105): error:  #20: identifier "GPIO_Pin_12" is undefined
+  	if(!Butten_Trig_Pin)  //判断子弹到达微动开关处  
+..\K_applications\Ctrl_shoot.c: 1 warning, 1 error
 compiling Ctrl_chassis.c...
-..\K_applications\Ctrl_chassis.c(15): error:  #5: cannot open source input file "Comm_umpire.h": No such file or directory
-  #include "Comm_umpire.h"
-..\K_applications\Ctrl_chassis.c: 0 warnings, 1 error
-"standard_tpye_c\standard_tpye_c.axf" - 5 Error(s), 0 Warning(s).
+..\K_applications\Ctrl_chassis.c(207): warning:  #223-D: function "CAN1_SendCommand_chassis" declared implicitly
+  	CAN1_SendCommand_chassis(motor_speed_pid[0].Control_OutPut,motor_speed_pid[1].Control_OutPut,
+..\K_applications\Ctrl_chassis.c: 1 warning, 0 errors
+compiling Ctrl_gimbal.c...
+..\K_applications\Ctrl_gimbal.c(100): error:  #20: identifier "Vision_Data" is undefined
+  			if (!Vision_Data.target_lose)
+..\K_applications\Ctrl_gimbal.c(183): error:  #20: identifier "motor2_data" is undefined
+  	float Pitch_encode = motor2_data[0].NowAngle;
+..\K_applications\Ctrl_gimbal.c(290): warning:  #223-D: function "CAN1_Send_Msg_gimbal" declared implicitly
+    CAN1_Send_Msg_gimbal(yaw_moto_current_final, 200, trigger_moto_current);//can发送云台控制量
+..\K_applications\Ctrl_gimbal.c: 1 warning, 2 errors
+"standard_tpye_c\standard_tpye_c.axf" - 5 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -71,7 +77,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
 Target not created.
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>

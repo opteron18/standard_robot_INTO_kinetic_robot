@@ -58,3 +58,10 @@ standard_tpye_c\higher_class.o: ..\K_applications\Configuration.h
 standard_tpye_c\higher_class.o: ..\application\remote_control.h
 standard_tpye_c\higher_class.o: ..\bsp\boards\bsp_rc.h
 standard_tpye_c\higher_class.o: ..\K_applications\Ctrl_chassis.h
+standard_tpye_c\higher_class.o: ..\application\referee.h
+standard_tpye_c\higher_class.o: ..\application\protocol\protocol.h
+standard_tpye_c\higher_class.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
+standard_tpye_c\higher_class.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
+standard_tpye_c\higher_class.o: ..\K_applications\PID.h
+standard_tpye_c\higher_class.o: ..\K_applications\Kalman.h
+standard_tpye_c\higher_class.o: ..\K_applications\Ctrl_shoot.h

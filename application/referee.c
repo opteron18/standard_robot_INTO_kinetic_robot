@@ -20,6 +20,10 @@ ext_referee_warning_t referee_warning_t;
 
 ext_game_robot_state_t robot_state;
 ext_power_heat_data_t power_heat_data_t;
+////////////////////////////////////////////////////////////////////////
+ext_game_robot_state_t Game_robot_state;//比赛机器人状态
+ext_power_heat_data_tt Umpire_PowerHeat;//实时功率热量数据
+////////////////////////////////////////////////////////////////////////
 ext_game_robot_pos_t game_robot_pos_t;
 ext_buff_musk_t buff_musk_t;
 aerial_robot_energy_t robot_energy_t;
@@ -166,6 +170,9 @@ void referee_data_solve(uint8_t *frame)
             break;
         }
     }
+		
+		memcpy(&Game_robot_state, &robot_state, sizeof(robot_state));
+		memcpy(&Umpire_PowerHeat, &power_heat_data_t, sizeof(power_heat_data_t));
 }
 
 void get_chassis_power_and_buffer(fp32 *power, fp32 *buffer)

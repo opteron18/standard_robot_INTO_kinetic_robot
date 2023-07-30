@@ -18,7 +18,7 @@
 #include "CAN_receive.h"
 //#include "can2.h"
 #include "Ctrl_chassis.h"
-#include "Comm_umpire.h"
+#include "referee.h"
 #include <math.h>
 #include <stdlib.h>
 #include "PID.h"
@@ -267,7 +267,7 @@ void Power_off_function(void)//¶Ïµç±£»¤
 	Control_data.Gimbal_Wz = 0;
 	E_yaw = imu.yaw;
 	Chassismode_flag = 0;
-	PWM_Write(PWM2_CH3,0);
+//	PWM_Write(PWM2_CH3,0);
 	laser_off();			
 }
 

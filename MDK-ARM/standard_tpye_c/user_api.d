@@ -58,3 +58,7 @@ standard_tpye_c\user_api.o: ..\K_applications\IMU.h
 standard_tpye_c\user_api.o: ..\application\INS_task.h
 standard_tpye_c\user_api.o: ..\application\remote_control.h
 standard_tpye_c\user_api.o: ..\bsp\boards\bsp_rc.h
+standard_tpye_c\user_api.o: ..\application\referee.h
+standard_tpye_c\user_api.o: ..\application\protocol\protocol.h
+standard_tpye_c\user_api.o: ..\K_applications\Higher_Class.h
+standard_tpye_c\user_api.o: ..\K_applications\PID.h

@@ -10,13 +10,13 @@
 #include <stdlib.h>
 #include "remote_control.h"
 //#include "delay.h"
-#include "pwm.h"
+//#include "pwm.h"
 #include "Higher_Class.h"
 #include "User_Api.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "laser.h"
-#include "can1.h"
+//#include "laser.h"
+#include "CAN_receive.h"
 
 #define Butten_Trig_Pin GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_12)
 #define FireMotor_Direction 1 //发射拨盘的转动方向
