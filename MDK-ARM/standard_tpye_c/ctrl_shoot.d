@@ -1,5 +1,13 @@
 standard_tpye_c\ctrl_shoot.o: ..\K_applications\Ctrl_shoot.c
-standard_tpye_c\ctrl_shoot.o: ..\K_applications\Ctrl_shoot.h
+standard_tpye_c\ctrl_shoot.o: ..\application\shoot.h
+standard_tpye_c\ctrl_shoot.o: ..\application\struct_typedef.h
+standard_tpye_c\ctrl_shoot.o: ..\application\CAN_receive.h
+standard_tpye_c\ctrl_shoot.o: ..\application\gimbal_task.h
+standard_tpye_c\ctrl_shoot.o: ..\components\controller\pid.h
+standard_tpye_c\ctrl_shoot.o: ..\application\remote_control.h
+standard_tpye_c\ctrl_shoot.o: ..\bsp\boards\bsp_rc.h
+standard_tpye_c\ctrl_shoot.o: ..\components\algorithm\user_lib.h
+standard_tpye_c\ctrl_shoot.o: ..\K_applications\Ctrl_gimbal.h
 standard_tpye_c\ctrl_shoot.o: ..\K_applications\sys.h
 standard_tpye_c\ctrl_shoot.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 standard_tpye_c\ctrl_shoot.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
@@ -46,9 +54,6 @@ standard_tpye_c\ctrl_shoot.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 standard_tpye_c\ctrl_shoot.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 standard_tpye_c\ctrl_shoot.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 standard_tpye_c\ctrl_shoot.o: ../Inc/stm32f4xx_it.h
-standard_tpye_c\ctrl_shoot.o: ..\application\CAN_receive.h
-standard_tpye_c\ctrl_shoot.o: ..\application\struct_typedef.h
-standard_tpye_c\ctrl_shoot.o: ..\K_applications\Ctrl_gimbal.h
 standard_tpye_c\ctrl_shoot.o: ../Inc/usart.h
 standard_tpye_c\ctrl_shoot.o: ../Inc/main.h
 standard_tpye_c\ctrl_shoot.o: ..\application\INS_task.h
@@ -58,8 +63,6 @@ standard_tpye_c\ctrl_shoot.o: ..\K_applications\Configuration.h
 standard_tpye_c\ctrl_shoot.o: ..\K_applications\User_Api.h
 standard_tpye_c\ctrl_shoot.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
 standard_tpye_c\ctrl_shoot.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
-standard_tpye_c\ctrl_shoot.o: ..\application\remote_control.h
-standard_tpye_c\ctrl_shoot.o: ..\bsp\boards\bsp_rc.h
 standard_tpye_c\ctrl_shoot.o: ..\K_applications\Higher_Class.h
 standard_tpye_c\ctrl_shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 standard_tpye_c\ctrl_shoot.o: ../Inc/FreeRTOSConfig.h

@@ -134,6 +134,19 @@ typedef struct
     uint16_t heat;
 } shoot_control_t;
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+extern uint8_t Fire_mode;
+extern int block_flag;
+extern int16_t trigger_moto_speed_ref2;
+
+void Encode_C(M_Data*ptr);
+void shoot_task(void);
+void shoot_task1(void);
+void block_bullet_handle(void);
+void shoot_ready_control(void);
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
 //由于射击和云台使用同一个can的id故也射击任务在云台任务中执行
 extern void shoot_init(void);
 extern int16_t shoot_control_loop(void);

@@ -19,6 +19,7 @@
 #include "task.h"
 #include "math.h"
 #include "Usart_SendData.h"
+#include "bsp_laser.h"
 
 #define DITHERING_TIMNE 150 
 
@@ -150,9 +151,9 @@ void gimbal_control_acquisition(void)
 			shoot_task();
 		
 		if (speed_17mm_level_Start_Flag)
-			shoot_laser_on();
+			laser_on();
 		if (!speed_17mm_level_Start_Flag)
-			shoot_laser_off();
+			laser_off();
 		
 	  Gimbalmode_flag = 0; 
 	}
@@ -363,9 +364,9 @@ void gimbal_control_acquisition(void)
 		}
 		
 		if(speed_17mm_level_Start_Flag && !Vision_Flag)
-			shoot_laser_on();
+			laser_on();
 		else if(!speed_17mm_level_Start_Flag || Vision_Flag)
-			shoot_laser_off();
+			laser_off();
 	
 		if(Inverse_flag)  //拨轮手动反转
 		{

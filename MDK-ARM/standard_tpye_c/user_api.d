@@ -78,3 +78,4 @@ standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/t
 standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 standard_tpye_c\user_api.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
 standard_tpye_c\user_api.o: ..\K_applications\Usart_SendData.h
+standard_tpye_c\user_api.o: ..\bsp\boards\bsp_laser.h

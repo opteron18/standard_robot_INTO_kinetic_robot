@@ -954,14 +954,14 @@ character_struct  character;
 //}
 
 
-///**********字符数据**********/
-///*******************************************数据编写********************************************************/
-//int start_cnt = 0;
-//int SpinTop_Flag_cnt = 0;
-//int Vision_Flag_cnt = 0;
-//int Fire_Mode_cnt = 0;
-//int Chassis_Mode_cnt = 0;
-//int Stronghold_Flag_cnt = 0;
+/**********字符数据**********/
+/*******************************************数据编写********************************************************/
+int start_cnt = 0;
+int SpinTop_Flag_cnt = 0;
+int Vision_Flag_cnt = 0;
+int Fire_Mode_cnt = 0;
+int Chassis_Mode_cnt = 0;
+int Stronghold_Flag_cnt = 0;
 ///***********************************模式***********************************/
 //void send_mode(void)
 //{
