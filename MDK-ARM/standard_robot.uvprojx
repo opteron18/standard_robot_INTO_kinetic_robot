@@ -1048,6 +1048,11 @@
               <FileType>1</FileType>
               <FilePath>..\K_applications\Kalman.c</FilePath>
             </File>
+            <File>
+              <FileName>Usart_SendData.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\K_applications\Usart_SendData.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

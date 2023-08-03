@@ -197,7 +197,7 @@ void Encoder_angle_Handle(void)//云台电机旋转角度函数
 }
 
 
-static void ramp_calc(void)//摩擦轮pwm值递增
+static void ramp_calc0(void)//摩擦轮pwm值递增
 {
 	fri_out += (SHOOT_FRIC_PWM_ADD_VALUE * 0.01);
 	
@@ -238,7 +238,7 @@ void friction_wheel_ramp_function(void)//摩擦轮控制函数
 		else
 		  speed_17mm_level = 1537;//1537;  //1500// 15m/s
 		
-		ramp_calc();
+		ramp_calc0();
 //		PWM_Write(PWM2_CH1,fri_out);
 //    PWM_Write(PWM2_CH2,fri_out);	
 		fric1_on(fri_out);

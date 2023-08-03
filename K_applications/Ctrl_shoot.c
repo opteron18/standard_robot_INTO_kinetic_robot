@@ -18,7 +18,7 @@
 //#include "laser.h"
 #include "CAN_receive.h"
 
-#define Butten_Trig_Pin GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_12)
+#define Butten_Trig_Pin HAL_GPIO_ReadPin(BUTTON_TRIG_GPIO_Port, BUTTON_TRIG_Pin)
 #define FireMotor_Direction 1 //发射拨盘的转动方向
 
 u8 Fire_mode = Fire_mode_init;

@@ -65,3 +65,12 @@ standard_tpye_c\higher_class.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
 standard_tpye_c\higher_class.o: ..\K_applications\PID.h
 standard_tpye_c\higher_class.o: ..\K_applications\Kalman.h
 standard_tpye_c\higher_class.o: ..\K_applications\Ctrl_shoot.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+standard_tpye_c\higher_class.o: ../Inc/FreeRTOSConfig.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+standard_tpye_c\higher_class.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

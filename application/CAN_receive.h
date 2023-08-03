@@ -74,6 +74,20 @@ extern float Real_current;
 static int16_t kalman(int16_t x,uint8_t i);			//机械角卡尔曼
 static void Angle_deal(int i);				//机械角越界处理
 void CAN2_Send_Msg_gimbal(int16_t control2_20A);
+void CAN1_SendCommand_chassis(signed long ESC_201,signed long ESC_202,signed long ESC_203,signed long ESC_204);
+void CAN1_Send_Msg_gimbal(int16_t control_209,int16_t control_205,int16_t control_206);
+void CAN1_SendCommand_Powerlimit(uint16_t Target_power);
+void CAN1_Send_Msg_POWER(uint16_t InputVot,uint16_t CapVot, uint16_t Current,uint16_t Init_Power);
+
+typedef struct		//视觉相关数据结构体
+{
+	uint8_t flash;				//刷新                                    
+	uint8_t mode;				//模式
+	uint8_t target_lose;	//无目标		
+}Vision_InitTypeDef;
+
+extern Vision_InitTypeDef Vision_Data;
+extern M_Data motor2_data[3];		//电机数据
 
 /**
   * @brief          send control current of motor (0x205, 0x206, 0x207, 0x208)

@@ -27,7 +27,7 @@ extern float error;
 
 static void Pitch_pid(float Target_angle);
 static void Yaw_angle_pid(float Targrt_d_angle);
-static void ramp_calc(void);
+static void ramp_calc0(void);
 static void ramp_calc1(void);
 
 void Encoder_angle_Handle(void);

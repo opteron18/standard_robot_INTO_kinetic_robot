@@ -52,6 +52,8 @@ static CAN_TxHeaderTypeDef  chassis_tx_message;
 static uint8_t              chassis_can_send_data[8];
 static CAN_TxHeaderTypeDef  CAN2_tx_message;
 static uint8_t              CAN2_can_send_data[8];
+static CAN_TxHeaderTypeDef  Powerlimit_tx_message;
+static uint8_t              Powerlimit_can_send_data[8];
 
 
 /*********此处完成功能********
@@ -70,6 +72,10 @@ float PowerData[4];   //电容板子主控数据结构体
 float Real_power = 0;
 float Real_voltage = 0;
 float Real_current = 0;
+
+float vision_error = 0;
+M_Data motor2_data[3];			//定义电机数据结构体
+Vision_InitTypeDef Vision_Data={0};
 
 /**
   * @brief          hal CAN fifo call back, receive motor data
@@ -322,7 +328,6 @@ void CAN_cmd_chassis(int16_t motor1, int16_t motor2, int16_t motor3, int16_t mot
 void CAN2_Send_Msg_gimbal(int16_t control2_20A)  //ID 6
 {	
 	uint32_t send_mail_box;
-  uint16_t i=0;
   CAN2_tx_message.StdId=0x2ff;	 // 标准标识符为0
   CAN2_tx_message.IDE = CAN_ID_STD;			//指定将要传输的消息的标识符的类型
   CAN2_tx_message.RTR = CAN_RTR_DATA;		//指定的帧将被传输的消息的类型   数据帧或远程帧
@@ -330,8 +335,62 @@ void CAN2_Send_Msg_gimbal(int16_t control2_20A)  //ID 6
   CAN2_can_send_data[2] = control2_20A>>8;
 	CAN2_can_send_data[3] = control2_20A;
 	
-	HAL_CAN_AddTxMessage(&GIMBAL_CAN, &gimbal_tx_message, gimbal_can_send_data, &send_mail_box);
+	HAL_CAN_AddTxMessage(&hcan2, &CAN2_tx_message, CAN2_can_send_data, &send_mail_box);
 }
+
+//发送底盘电机数据
+void CAN1_SendCommand_chassis(signed long ESC_201,signed long ESC_202,signed long ESC_203,signed long ESC_204)
+{
+	uint32_t send_mail_box;
+	
+	chassis_tx_message.StdId = 0x200;				//根据c620设置标识符
+	chassis_tx_message.IDE = CAN_ID_STD;				//指定将要传输的消息的标识符的类型
+	chassis_tx_message.RTR = CAN_RTR_DATA;			//指定的帧将被传输的消息的类型   数据帧或远程帧
+	chassis_tx_message.DLC = 8;						//指定数据的长度
+	chassis_can_send_data[0] = (unsigned char)(ESC_201>>8);
+	chassis_can_send_data[1] = (unsigned char)(ESC_201);
+	chassis_can_send_data[2] = (unsigned char)(ESC_202>>8);
+	chassis_can_send_data[3] = (unsigned char)(ESC_202);
+	chassis_can_send_data[4] = (unsigned char)(ESC_203>>8);
+	chassis_can_send_data[5] = (unsigned char)(ESC_203);
+	chassis_can_send_data[6] = (unsigned char)(ESC_204>>8);
+	chassis_can_send_data[7] = (unsigned char)(ESC_204);
+	
+	HAL_CAN_AddTxMessage(&hcan1, &chassis_tx_message, chassis_can_send_data, &send_mail_box);
+}
+
+
+//发送超级电容主控板信息，所有发送的实际值后面要乘100  可设定范围（35w——130w）对应发送的值为3500——13000
+void CAN1_SendCommand_Powerlimit(uint16_t Target_power)
+{
+	uint32_t send_mail_box;
+	
+	Powerlimit_tx_message.StdId = 0x210;				//根据电容主控板设置标识符
+	Powerlimit_tx_message.IDE = CAN_ID_STD;				//指定将要传输的消息的标识符的类型
+	Powerlimit_tx_message.RTR = CAN_RTR_DATA;			//指定的帧将被传输的消息的类型   数据帧或远程帧
+	Powerlimit_tx_message.DLC = 8;						//指定数据的长度
+	Powerlimit_can_send_data[0] = (Target_power>>8);  //目标功率/设定功率
+	Powerlimit_can_send_data[1] = (Target_power);
+
+	HAL_CAN_AddTxMessage(&hcan1, &Powerlimit_tx_message, Powerlimit_can_send_data, &send_mail_box);
+}
+
+
+//can发送 control_209 Y轴ID7  control_20A P轴  control_205 ID5 弹仓盖电机  control_206 ID 6 拨弹电机
+void CAN1_Send_Msg_gimbal(int16_t control_209,int16_t control_205,int16_t control_206)
+{	
+	uint32_t send_mail_box;
+	
+  gimbal_tx_message.StdId=0x2ff;	 									// 标准标识符为0
+  gimbal_tx_message.IDE = CAN_ID_STD;								//指定将要传输的消息的标识符的类型
+  gimbal_tx_message.RTR = CAN_RTR_DATA;							//指定的帧将被传输的消息的类型   数据帧或远程帧
+  gimbal_tx_message.DLC = 4;												//指定数据的长度
+	gimbal_can_send_data[0] = control_209>>8;
+	gimbal_can_send_data[1] = control_209;
+	
+  HAL_CAN_AddTxMessage(&hcan1, &gimbal_tx_message, gimbal_can_send_data, &send_mail_box);
+}
+
 ////////////////////////////////////////////////////////////////////////
 /////////////////////////以下为数据预处理函数////////////////////////////
 ////////////////////////////////////////////////////////////////////////

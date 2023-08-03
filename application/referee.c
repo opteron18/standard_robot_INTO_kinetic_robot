@@ -33,7 +33,14 @@ ext_bullet_remaining_t bullet_remaining_t;
 ext_student_interactive_data_t student_interactive_data_t;
 
 
-
+////////////////////////////////////////////////////////////////////////
+uint8_t Rx_buffer[UART_RX_LEN];		//接收缓冲
+uint8_t SendBuff[UART_RX_LEN];			//发送数据缓冲区
+static uint8_t Pointer;						//接收缓冲指针
+int bullet_speed_last;
+int bullet_speed;
+int offline_flag;
+////////////////////////////////////////////////////////////////////////
 
 void init_referee_struct_data(void)
 {

@@ -5,6 +5,8 @@
 
 #include "protocol.h"
 
+#define UART_RX_LEN     200
+
 typedef enum
 {
     RED_HERO        = 1,
@@ -185,6 +187,9 @@ typedef __packed struct
 
 extern ext_game_robot_state_t Game_robot_state;//比赛机器人状态
 extern ext_power_heat_data_tt Umpire_PowerHeat;//实时功率热量数据
+extern int bullet_speed_last;
+extern int bullet_speed;
+extern int offline_flag;
 
 extern void init_referee_struct_data(void);
 extern void referee_data_solve(uint8_t *frame);

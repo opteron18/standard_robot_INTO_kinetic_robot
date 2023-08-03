@@ -137,5 +137,7 @@ typedef struct
 //由于射击和云台使用同一个can的id故也射击任务在云台任务中执行
 extern void shoot_init(void);
 extern int16_t shoot_control_loop(void);
+extern void shoot_laser_on(void);
+extern void shoot_laser_off(void);
 
 #endif

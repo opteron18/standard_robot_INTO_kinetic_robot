@@ -13,7 +13,7 @@
 #include "CAN_receive.h"
 #include "PID.h"
 //#include "pwm.h"
-#include "laser.h"
+#include "shoot.h"
 #include "Ctrl_shoot.h"
 #include "FreeRTOS.h"
 #include "task.h"
@@ -150,9 +150,9 @@ void gimbal_control_acquisition(void)
 			shoot_task();
 		
 		if (speed_17mm_level_Start_Flag)
-			laser_on();
+			shoot_laser_on();
 		if (!speed_17mm_level_Start_Flag)
-			laser_off();
+			shoot_laser_off();
 		
 	  Gimbalmode_flag = 0; 
 	}
@@ -363,9 +363,9 @@ void gimbal_control_acquisition(void)
 		}
 		
 		if(speed_17mm_level_Start_Flag && !Vision_Flag)
-			laser_on();
+			shoot_laser_on();
 		else if(!speed_17mm_level_Start_Flag || Vision_Flag)
-			laser_off();
+			shoot_laser_off();
 	
 		if(Inverse_flag)  //拨轮手动反转
 		{
