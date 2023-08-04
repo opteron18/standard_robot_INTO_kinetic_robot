@@ -56,6 +56,14 @@ standard_tpye_c\user_api.o: ..\application\struct_typedef.h
 standard_tpye_c\user_api.o: ..\K_applications\Ctrl_chassis.h
 standard_tpye_c\user_api.o: ..\K_applications\IMU.h
 standard_tpye_c\user_api.o: ..\application\INS_task.h
+standard_tpye_c\user_api.o: ..\components\devices\BMI088driver.h
+standard_tpye_c\user_api.o: ..\imucomponents\QuaternionEKF.h
+standard_tpye_c\user_api.o: ..\imucomponents\kalman_filter.h
+standard_tpye_c\user_api.o: ..\components\algorithm\Include\arm_math.h
+standard_tpye_c\user_api.o: ../Drivers/CMSIS/Include/core_cm4.h
+standard_tpye_c\user_api.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\string.h
+standard_tpye_c\user_api.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
+standard_tpye_c\user_api.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
 standard_tpye_c\user_api.o: ..\application\remote_control.h
 standard_tpye_c\user_api.o: ..\bsp\boards\bsp_rc.h
 standard_tpye_c\user_api.o: ..\application\referee.h
@@ -65,8 +73,8 @@ standard_tpye_c\user_api.o: ..\K_applications\PID.h
 standard_tpye_c\user_api.o: ..\application\shoot.h
 standard_tpye_c\user_api.o: ..\application\gimbal_task.h
 standard_tpye_c\user_api.o: ..\components\controller\pid.h
-standard_tpye_c\user_api.o: ..\components\algorithm\user_lib.h
-standard_tpye_c\user_api.o: ..\K_applications\Ctrl_shoot.h
+standard_tpye_c\user_api.o: ..\imucomponents\user_lib.h
+standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 standard_tpye_c\user_api.o: ../Inc/FreeRTOSConfig.h
 standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
@@ -76,6 +84,10 @@ standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/
 standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-standard_tpye_c\user_api.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
+standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+standard_tpye_c\user_api.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+standard_tpye_c\user_api.o: ..\K_applications\Ctrl_shoot.h
 standard_tpye_c\user_api.o: ..\K_applications\Usart_SendData.h
 standard_tpye_c\user_api.o: ..\bsp\boards\bsp_laser.h

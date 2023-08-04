@@ -86,9 +86,16 @@ standard_tpye_c\main.o: ..\application\chassis_task.h
 standard_tpye_c\main.o: ..\application\CAN_receive.h
 standard_tpye_c\main.o: ..\application\gimbal_task.h
 standard_tpye_c\main.o: ..\components\controller\pid.h
-standard_tpye_c\main.o: ..\components\algorithm\user_lib.h
+standard_tpye_c\main.o: ..\imucomponents\user_lib.h
+standard_tpye_c\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 standard_tpye_c\main.o: ..\application\detect_task.h
 standard_tpye_c\main.o: ..\application\INS_task.h
+standard_tpye_c\main.o: ..\components\devices\BMI088driver.h
+standard_tpye_c\main.o: ..\imucomponents\QuaternionEKF.h
+standard_tpye_c\main.o: ..\imucomponents\kalman_filter.h
+standard_tpye_c\main.o: ..\components\algorithm\Include\arm_math.h
+standard_tpye_c\main.o: ../Drivers/CMSIS/Include/core_cm4.h
+standard_tpye_c\main.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
 standard_tpye_c\main.o: ..\application\led_flow_task.h
 standard_tpye_c\main.o: ..\application\oled_task.h
 standard_tpye_c\main.o: ..\application\referee_usart_task.h

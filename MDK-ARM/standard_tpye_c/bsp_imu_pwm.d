@@ -1,6 +1,8 @@
 standard_tpye_c\bsp_imu_pwm.o: ..\bsp\boards\bsp_imu_pwm.c
 standard_tpye_c\bsp_imu_pwm.o: ..\bsp\boards\bsp_imu_pwm.h
 standard_tpye_c\bsp_imu_pwm.o: ..\application\struct_typedef.h
+standard_tpye_c\bsp_imu_pwm.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdint.h
+standard_tpye_c\bsp_imu_pwm.o: ../Inc/tim.h
 standard_tpye_c\bsp_imu_pwm.o: ../Inc/main.h
 standard_tpye_c\bsp_imu_pwm.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 standard_tpye_c\bsp_imu_pwm.o: ../Inc/stm32f4xx_hal_conf.h
@@ -9,7 +11,6 @@ standard_tpye_c\bsp_imu_pwm.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal
 standard_tpye_c\bsp_imu_pwm.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 standard_tpye_c\bsp_imu_pwm.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 standard_tpye_c\bsp_imu_pwm.o: ../Drivers/CMSIS/Include/core_cm4.h
-standard_tpye_c\bsp_imu_pwm.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdint.h
 standard_tpye_c\bsp_imu_pwm.o: ../Drivers/CMSIS/Include/cmsis_version.h
 standard_tpye_c\bsp_imu_pwm.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 standard_tpye_c\bsp_imu_pwm.o: ../Drivers/CMSIS/Include/cmsis_armcc.h

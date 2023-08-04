@@ -6,7 +6,8 @@ standard_tpye_c\shoot.o: ..\application\gimbal_task.h
 standard_tpye_c\shoot.o: ..\components\controller\pid.h
 standard_tpye_c\shoot.o: ..\application\remote_control.h
 standard_tpye_c\shoot.o: ..\bsp\boards\bsp_rc.h
-standard_tpye_c\shoot.o: ..\components\algorithm\user_lib.h
+standard_tpye_c\shoot.o: ..\imucomponents\user_lib.h
+standard_tpye_c\shoot.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdint.h
 standard_tpye_c\shoot.o: ../Inc/main.h
 standard_tpye_c\shoot.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 standard_tpye_c\shoot.o: ../Inc/stm32f4xx_hal_conf.h
@@ -15,7 +16,6 @@ standard_tpye_c\shoot.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 standard_tpye_c\shoot.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 standard_tpye_c\shoot.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 standard_tpye_c\shoot.o: ../Drivers/CMSIS/Include/core_cm4.h
-standard_tpye_c\shoot.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdint.h
 standard_tpye_c\shoot.o: ../Drivers/CMSIS/Include/cmsis_version.h
 standard_tpye_c\shoot.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 standard_tpye_c\shoot.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -66,6 +66,7 @@ standard_tpye_c\shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/time
 standard_tpye_c\shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 standard_tpye_c\shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 standard_tpye_c\shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+standard_tpye_c\shoot.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 standard_tpye_c\shoot.o: ..\bsp\boards\bsp_laser.h
 standard_tpye_c\shoot.o: ..\bsp\boards\bsp_fric.h
 standard_tpye_c\shoot.o: ..\components\algorithm\Include\arm_math.h

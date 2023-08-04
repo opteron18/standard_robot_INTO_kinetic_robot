@@ -268,7 +268,7 @@ void Power_off_function(void)//¶Ïµç±£»¤
 	E_yaw = imu.yaw;
 	Chassismode_flag = 0;
 //	PWM_Write(PWM2_CH3,0);
-	laser_off();			
+//	laser_off();			
 }
 
 

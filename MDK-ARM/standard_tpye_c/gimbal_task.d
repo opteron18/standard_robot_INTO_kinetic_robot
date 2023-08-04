@@ -68,8 +68,13 @@ standard_tpye_c\gimbal_task.o: ..\components\algorithm\Include\arm_math.h
 standard_tpye_c\gimbal_task.o: ../Drivers/CMSIS/Include/core_cm4.h
 standard_tpye_c\gimbal_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\string.h
 standard_tpye_c\gimbal_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
-standard_tpye_c\gimbal_task.o: ..\components\algorithm\user_lib.h
+standard_tpye_c\gimbal_task.o: ..\imucomponents\user_lib.h
+standard_tpye_c\gimbal_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 standard_tpye_c\gimbal_task.o: ..\application\detect_task.h
 standard_tpye_c\gimbal_task.o: ..\application\gimbal_behaviour.h
 standard_tpye_c\gimbal_task.o: ..\application\INS_task.h
+standard_tpye_c\gimbal_task.o: ..\components\devices\BMI088driver.h
+standard_tpye_c\gimbal_task.o: ..\imucomponents\QuaternionEKF.h
+standard_tpye_c\gimbal_task.o: ..\imucomponents\kalman_filter.h
+standard_tpye_c\gimbal_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
 standard_tpye_c\gimbal_task.o: ..\application\shoot.h

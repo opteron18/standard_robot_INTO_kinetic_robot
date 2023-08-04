@@ -24,12 +24,19 @@
 #ifndef INS_Task_H
 #define INS_Task_H
 #include "struct_typedef.h"
+#include "stdint.h"
+#include "BMI088driver.h"
+#include "QuaternionEKF.h"
 
 //////////////////////////////////////////////////////////////////////////////////////////
 extern float imu_last;
 extern float pitch,roll,yaw; 		//欧拉角
 extern short aacx,aacy,aacz;		//加速度传感器原始数据
 extern short gyrox,gyroy,gyroz;	//陀螺仪原始数据
+
+#define X 0
+#define Y 1
+#define Z 2
 
 typedef struct IMU_tt
 {
@@ -67,6 +74,55 @@ typedef struct IMU_tt
     float 	yawRadout;
 		int16_t temperature;	//温度
 } imu_t;
+
+typedef struct
+{
+    float q[4]; // ??????
+
+    float Gyro[3];  // ???
+    float Accel[3]; // ???
+    float MotionAccel_b[3]; // ???????
+    float MotionAccel_n[3]; // ??????
+
+    float AccelLPF; // ?????????
+
+    // ????????????
+    float xn[3];
+    float yn[3];
+    float zn[3];
+
+    float atanxz;
+    float atanyz;
+
+    // ??
+    float Roll;
+    float Pitch;
+    float Yaw;
+    float YawTotalAngle;
+} INS_t;
+
+typedef struct
+{
+    uint8_t flag;
+
+    float scale[3];
+
+    float Yaw;
+    float Pitch;
+    float Roll;
+} IMU_Param_t;
+
+extern INS_t INS;
+
+void INS_Init(void);
+void INS_task(void const *pvParameters);
+void IMU_Temperature_Ctrl(void);
+
+void QuaternionUpdate(float *q, float gx, float gy, float gz, float dt);
+void QuaternionToEularAngle(float *q, float *Yaw, float *Pitch, float *Roll);
+void EularAngleToQuaternion(float Yaw, float Pitch, float Roll, float *q);
+void BodyFrameToEarthFrame(const float *vecBF, float *vecEF, float *q);
+void EarthFrameToBodyFrame(const float *vecEF, float *vecBF, float *q);
 
 extern imu_t imu;
 
@@ -126,7 +182,7 @@ extern imu_t imu;
   * @param[in]      pvParameters: NULL
   * @retval         none
   */
-extern void INS_task(void const *pvParameters);
+
 
 /**
   * @brief          calculate gyro zero drift

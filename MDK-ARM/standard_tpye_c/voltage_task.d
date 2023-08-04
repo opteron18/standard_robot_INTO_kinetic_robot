@@ -61,4 +61,5 @@ standard_tpye_c\voltage_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/inclu
 standard_tpye_c\voltage_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 standard_tpye_c\voltage_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 standard_tpye_c\voltage_task.o: ..\bsp\boards\bsp_adc.h
-standard_tpye_c\voltage_task.o: ..\components\algorithm\user_lib.h
+standard_tpye_c\voltage_task.o: ..\imucomponents\user_lib.h
+standard_tpye_c\voltage_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

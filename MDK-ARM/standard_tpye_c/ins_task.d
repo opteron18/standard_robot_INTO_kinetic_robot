@@ -1,6 +1,8 @@
 standard_tpye_c\ins_task.o: ..\application\INS_task.c
-standard_tpye_c\ins_task.o: ..\application\INS_task.h
+standard_tpye_c\ins_task.o: ..\application\ins_task.h
 standard_tpye_c\ins_task.o: ..\application\struct_typedef.h
+standard_tpye_c\ins_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdint.h
+standard_tpye_c\ins_task.o: ..\components\devices\BMI088driver.h
 standard_tpye_c\ins_task.o: ../Inc/main.h
 standard_tpye_c\ins_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 standard_tpye_c\ins_task.o: ../Inc/stm32f4xx_hal_conf.h
@@ -9,7 +11,6 @@ standard_tpye_c\ins_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_de
 standard_tpye_c\ins_task.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 standard_tpye_c\ins_task.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 standard_tpye_c\ins_task.o: ../Drivers/CMSIS/Include/core_cm4.h
-standard_tpye_c\ins_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdint.h
 standard_tpye_c\ins_task.o: ../Drivers/CMSIS/Include/cmsis_version.h
 standard_tpye_c\ins_task.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 standard_tpye_c\ins_task.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -46,6 +47,16 @@ standard_tpye_c\ins_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ua
 standard_tpye_c\ins_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 standard_tpye_c\ins_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 standard_tpye_c\ins_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+standard_tpye_c\ins_task.o: ..\imucomponents\QuaternionEKF.h
+standard_tpye_c\ins_task.o: ..\imucomponents\kalman_filter.h
+standard_tpye_c\ins_task.o: ..\components\algorithm\Include\arm_math.h
+standard_tpye_c\ins_task.o: ../Drivers/CMSIS/Include/core_cm4.h
+standard_tpye_c\ins_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\string.h
+standard_tpye_c\ins_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\math.h
+standard_tpye_c\ins_task.o: E:\KEILv5\ARM\ARMCC\Bin\..\include\stdlib.h
+standard_tpye_c\ins_task.o: ..\imucomponents\controller.h
+standard_tpye_c\ins_task.o: ..\bsp\boards\bsp_dwt.h
+standard_tpye_c\ins_task.o: ..\imucomponents\user_lib.h
 standard_tpye_c\ins_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 standard_tpye_c\ins_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 standard_tpye_c\ins_task.o: ../Inc/FreeRTOSConfig.h
@@ -61,11 +72,4 @@ standard_tpye_c\ins_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/q
 standard_tpye_c\ins_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 standard_tpye_c\ins_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 standard_tpye_c\ins_task.o: ..\bsp\boards\bsp_imu_pwm.h
-standard_tpye_c\ins_task.o: ..\bsp\boards\bsp_spi.h
-standard_tpye_c\ins_task.o: ..\components\devices\bmi088driver.h
-standard_tpye_c\ins_task.o: ..\components\devices\ist8310driver.h
-standard_tpye_c\ins_task.o: ..\components\controller\pid.h
-standard_tpye_c\ins_task.o: ..\components\algorithm\ahrs.h
-standard_tpye_c\ins_task.o: ..\components\algorithm\AHRS_MiddleWare.h
-standard_tpye_c\ins_task.o: ..\application\calibrate_task.h
-standard_tpye_c\ins_task.o: ..\application\detect_task.h
+standard_tpye_c\ins_task.o: ../Inc/tim.h
