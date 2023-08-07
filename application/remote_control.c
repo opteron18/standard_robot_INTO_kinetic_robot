@@ -277,12 +277,12 @@ static void KeyDataProcess(Mouse *mouse, Key *key)
 	else key->G = 0;
 	
 	if(key->buff & KEY_PRESSED_OFFSET_Z)//Key z
-		key->Z = 1;
-	else key->Z = 0;
+		key->M = 1;
+	else key->M = 0;
 	
 	if(key->buff & KEY_PRESSED_OFFSET_X)//Key x
-		key->X = 1;
-	else key->X = 0;
+		key->N = 1;
+	else key->N = 0;
 	
 	if(key->buff & KEY_PRESSED_OFFSET_C)//Key c
 		key->C = 1;

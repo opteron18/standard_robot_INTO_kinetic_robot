@@ -292,3 +292,22 @@ void EularAngleToQuaternion(float Yaw, float Pitch, float Roll, float *q)
     q[2] = sinPitch * cosRoll * sinYaw + cosPitch * sinRoll * cosYaw;
     q[3] = cosPitch * cosRoll * sinYaw - sinPitch * sinRoll * cosYaw;
 }
+/////////////////////////////////////////////////////////////////////////////////////////////
+//void INS_cali_gyro(fp32 cali_scale[3], fp32 cali_offset[3], uint16_t *time_count)
+//{
+//        if( *time_count == 0)
+//        {
+//            gyro_offset[0] = gyro_cali_offset[0];
+//            gyro_offset[1] = gyro_cali_offset[1];
+//            gyro_offset[2] = gyro_cali_offset[2];
+//        }
+//        gyro_offset_calc(gyro_offset, INS_gyro, time_count);
+
+//        cali_offset[0] = gyro_offset[0];
+//        cali_offset[1] = gyro_offset[1];
+//        cali_offset[2] = gyro_offset[2];
+//        cali_scale[0] = 1.0f;
+//        cali_scale[1] = 1.0f;
+//        cali_scale[2] = 1.0f;
+
+//}

@@ -144,7 +144,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
     can_filter_init();
     delay_init();
-    cali_param_init();
+//    cali_param_init();
     remote_control_init();
     usart1_tx_dma_init();
   /* USER CODE END 2 */

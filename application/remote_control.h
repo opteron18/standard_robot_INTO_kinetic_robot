@@ -103,7 +103,6 @@ typedef __packed struct
 	uint8_t press_l_last;
 }Mouse;	
 
-
 typedef	__packed struct
 {
 	uint16_t buff;
@@ -116,8 +115,8 @@ typedef	__packed struct
 	uint8_t R;
 	uint8_t F;
 	uint8_t G;
-	uint8_t Z;
-	uint8_t X;
+	uint8_t M;//	uint8_t Z;
+	uint8_t N;//	uint8_t X;
 	uint8_t C;
 	uint8_t V;
 	uint8_t B;

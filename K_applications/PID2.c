@@ -56,13 +56,6 @@ PID_Controler Fire_speed_pid = {0};	  //波轮电机速度
 PID_Controler Fire_pid = {0};
 PID_Controler Power_Limit_pid = {0};   //功率限制
 
-
-void PID_Init(PID_Controler *Controler)
-{
-	
-}
-
-
 //pid初始化
 void Total_PID_Init(void)
 {

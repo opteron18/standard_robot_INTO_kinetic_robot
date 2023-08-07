@@ -67,7 +67,6 @@ extern float VISION_PID_YAW_ANGLE_KI;
 extern float VISION_PID_YAW_ANGLE_KD;
 
 void Total_PID_Init(void);
-void PID_Init(PID_Controler *Controler);
 void PID_Integrate_Reset(PID_Controler *Controler);
 float PID_Control(PID_Controler *Controler,float target,float measure);
 float PID_Control_Div_LPF(PID_Controler *Controler,float target,float measure);
