@@ -46,18 +46,18 @@ extern uint8_t GlobalDebugMode;
 #define PI 3.14159265354f
 #endif
 
-#define VAL_LIMIT(val, min, max) \
-    do                           \
-    {                            \
-        if ((val) <= (min))      \
-        {                        \
-            (val) = (min);       \
-        }                        \
-        else if ((val) >= (max)) \
-        {                        \
-            (val) = (max);       \
-        }                        \
-    } while (0)
+//#define VAL_LIMIT(val, min, max) \
+//    do                           \
+//    {                            \
+//        if ((val) <= (min))      \
+//        {                        \
+//            (val) = (min);       \
+//        }                        \
+//        else if ((val) >= (max)) \
+//        {                        \
+//            (val) = (max);       \
+//        }                        \
+//    } while (0)
 
 #define ANGLE_LIMIT_360(val, angle)     \
     do                                  \

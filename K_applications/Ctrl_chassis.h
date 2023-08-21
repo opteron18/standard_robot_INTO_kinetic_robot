@@ -23,7 +23,7 @@ typedef struct
 extern SpinTop_t SpinTop;
 static void motor_speed_ctrl(int16_t M1_speed,int16_t M2_speed,int16_t M3_speed,int16_t M4_speed);
 static void Inverse_Kinematic_Ctrl(float Vx,float Vy,float Wz);
-void FRT_Inverse_Kinematic_Ctrl(void *pvParameters);
+void FRT_Inverse_Kinematic_Ctrl(void const *pvParameters);
 
 
 #endif

@@ -84,3 +84,8 @@ standard_tpye_c\freertos.o: ..\application\referee_usart_task.h
 standard_tpye_c\freertos.o: ..\application\usb_task.h
 standard_tpye_c\freertos.o: ..\application\voltage_task.h
 standard_tpye_c\freertos.o: ..\application\servo_task.h
+standard_tpye_c\freertos.o: ..\K_applications\Ctrl_gimbal.h
+standard_tpye_c\freertos.o: ..\K_applications\sys.h
+standard_tpye_c\freertos.o: ../Inc/stm32f4xx_it.h
+standard_tpye_c\freertos.o: ../Inc/usart.h
+standard_tpye_c\freertos.o: ..\K_applications\Ctrl_chassis.h

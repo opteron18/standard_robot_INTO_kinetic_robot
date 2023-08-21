@@ -209,7 +209,7 @@ static void Inverse_Kinematic_Ctrl(float Vx,float Vy,float Wz)
 }
 
 
-void FRT_Inverse_Kinematic_Ctrl(void *pvParameters)//底盘控制任务
+void FRT_Inverse_Kinematic_Ctrl(void const *pvParameters)//底盘控制任务
 {
 	vTaskDelay(357);
 	while(1)

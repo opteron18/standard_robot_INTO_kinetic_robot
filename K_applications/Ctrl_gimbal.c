@@ -293,7 +293,7 @@ void Gimbal_Ctrl(float pitch,float yaw_rate)
 
 
 //云台控制任务
-void FRT_Gimbal_Ctrl(void *pvParameters)
+void FRT_Gimbal_Ctrl(void const *pvParameters)
 {
 	vTaskDelay(201);
 	while(1)

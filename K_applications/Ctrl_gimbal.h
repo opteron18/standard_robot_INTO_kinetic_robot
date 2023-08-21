@@ -35,7 +35,7 @@ void friction_wheel_ramp_function(void);
 void Control_on_off_friction_wheel(void);
 void Power_off_function(void);
 void Gimbal_Ctrl(float pitch,float yaw_rate);
-void FRT_Gimbal_Ctrl(void *pvParameters);
+void FRT_Gimbal_Ctrl(void const *pvParameters);
 
 #endif
 
