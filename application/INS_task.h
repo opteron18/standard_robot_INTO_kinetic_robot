@@ -113,6 +113,7 @@ typedef struct
 } IMU_Param_t;
 
 extern INS_t INS;
+extern imu_t imu;
 
 void INS_Init(void);
 void INS_task(void const *pvParameters);
@@ -124,7 +125,6 @@ void EularAngleToQuaternion(float Yaw, float Pitch, float Roll, float *q);
 void BodyFrameToEarthFrame(const float *vecBF, float *vecEF, float *q);
 void EarthFrameToBodyFrame(const float *vecEF, float *vecBF, float *q);
 
-extern imu_t imu;
 
 #define SPI_DMA_GYRO_LENGHT       8
 #define SPI_DMA_ACCEL_LENGHT      9

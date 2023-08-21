@@ -240,7 +240,7 @@ void gimbal_control_acquisition(void)
 	  //CTRL+Z 功率优先/血量优先 模式切换
 		if (Chassis_mode_cnt>200)
 		{
-			if (RC_Ctl.key.Z)
+			if (RC_Ctl.key.M)
 			{	
 				Chassis_Mode_cnt = 0; //画UI用
 				Chassis_mode_cnt = 0;
@@ -325,7 +325,7 @@ void gimbal_control_acquisition(void)
 		
 		if (Inverse_cnt > DITHERING_TIMNE)  //拨轮手动反转
 		{
-			if (RC_Ctl.key.X == 1)
+			if (RC_Ctl.key.N == 1)
 			{
 				Inverse_flag = 1;
 				Inverse_cnt = 0;

@@ -101,3 +101,4 @@ standard_tpye_c\main.o: ..\application\oled_task.h
 standard_tpye_c\main.o: ..\application\referee_usart_task.h
 standard_tpye_c\main.o: ..\application\usb_task.h
 standard_tpye_c\main.o: ..\application\voltage_task.h
+standard_tpye_c\main.o: ..\bsp\boards\bsp_dwt.h

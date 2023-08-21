@@ -16,6 +16,7 @@
 #include "bsp_imu_pwm.h"
 
 INS_t INS;
+imu_t imu;
 IMU_Param_t IMU_Param;
 PID_t TempCtrl = {0};
 
@@ -99,7 +100,20 @@ void INS_task(void const *pvParameters)
         INS.Roll = QEKF_INS.Roll;
         INS.YawTotalAngle = QEKF_INS.YawTotalAngle;
     }
-
+		
+		imu.yaw = INS.Yaw;
+		imu.roll = INS.Roll;
+		imu.pitch = INS.Pitch;
+		
+//		imu.yaw	 =	INS.Accel[X];
+//    imu.yaw  =  INS.Accel[Y];
+//    imu.yaw  =  INS.Accel[Z];
+    imu.gyro[0]  =  INS.Gyro[X]; //pitch
+    imu.gyro[1]  =  INS.Gyro[Y]; 
+    imu.gyro[2]  =  INS.Gyro[Z];
+		
+		
+		
     // temperature control
     if ((count % 2) == 0)
     {
@@ -293,21 +307,3 @@ void EularAngleToQuaternion(float Yaw, float Pitch, float Roll, float *q)
     q[3] = cosPitch * cosRoll * sinYaw - sinPitch * sinRoll * cosYaw;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
-//void INS_cali_gyro(fp32 cali_scale[3], fp32 cali_offset[3], uint16_t *time_count)
-//{
-//        if( *time_count == 0)
-//        {
-//            gyro_offset[0] = gyro_cali_offset[0];
-//            gyro_offset[1] = gyro_cali_offset[1];
-//            gyro_offset[2] = gyro_cali_offset[2];
-//        }
-//        gyro_offset_calc(gyro_offset, INS_gyro, time_count);
-
-//        cali_offset[0] = gyro_offset[0];
-//        cali_offset[1] = gyro_offset[1];
-//        cali_offset[2] = gyro_offset[2];
-//        cali_scale[0] = 1.0f;
-//        cali_scale[1] = 1.0f;
-//        cali_scale[2] = 1.0f;
-
-//}

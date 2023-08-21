@@ -51,6 +51,8 @@
 #include "referee_usart_task.h"
 #include "usb_task.h"
 #include "voltage_task.h"
+#include "BMI088driver.h"
+#include "bsp_dwt.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -147,6 +149,8 @@ int main(void)
 //    cali_param_init();
     remote_control_init();
     usart1_tx_dma_init();
+		DWT_Init(168);
+    while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR)
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
